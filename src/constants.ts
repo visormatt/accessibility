@@ -1,3 +1,5 @@
+// tslint:disable max-line-length
+
 export const ADMIN = [
   'https://shop-admin.k8s.thredtest.com/',
   'https://shop-admin.k8s.thredtest.com/product/23719491',

@@ -9,7 +9,7 @@
   "jsRules": {},
 
   "linterOptions": {
-    "exclude": ["node_modules/@thredup/generator-templates/**/*"]
+    "exclude": []
   },
 
   "rules": {

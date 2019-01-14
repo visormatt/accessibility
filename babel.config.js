@@ -12,7 +12,13 @@
 module.exports = function(api) {
   if (api) api.cache(true);
 
-  const plugins = ['@babel/plugin-transform-async-to-generator'];
+  const plugins = [
+    ['@babel/plugin-proposal-class-properties', { loose: true }], // eslint-disable-line
+    '@babel/plugin-proposal-object-rest-spread',
+    '@babel/plugin-syntax-dynamic-import',
+    '@babel/plugin-transform-async-to-generator'
+  ];
+
   const presets = [
     [
       '@babel/preset-env',
