@@ -1,0 +1,45 @@
+{
+  "defaultSeverity": "error",
+
+  "extends": [
+    "tslint:recommended",
+    "tslint-config-airbnb"
+  ],
+
+  "jsRules": {},
+
+  "linterOptions": {
+    "exclude": ["node_modules/@thredup/generator-templates/**/*"]
+  },
+
+  "rules": {
+    "align": [false],
+    "import-name": false, // https://goo.gl/KWHQtD
+    "interface-name": [true, "never-prefix"],
+    "max-line-length": [true, { "limit": 80, "ignore-pattern": "^import "}],
+    "no-console": false,
+    "no-empty-interface": false,
+    "no-shadowed-variable": false,
+    "ordered-imports": false,
+    "object-literal-sort-keys": false,
+    "semicolon": [
+      true,
+      "always",
+      "ignore-bound-class-methods"
+    ],
+    "trailing-comma": [
+      true,
+      {
+        "multiline": "never",
+        "singleline": "never"
+      }
+    ],
+    "variable-name": [
+      true,
+      "allow-leading-underscore",
+      "allow-pascal-case"
+    ]
+  },
+
+  "rulesDirectory": []
+}

@@ -13,7 +13,15 @@ module.exports = function(api) {
   if (api) api.cache(true);
 
   const plugins = ['@babel/plugin-transform-async-to-generator'];
-  const presets = [['@babel/preset-env']];
+  const presets = [
+    [
+      '@babel/preset-env',
+      {
+        useBuiltIns: 'usage'
+      }
+    ],
+    '@babel/preset-typescript'
+  ];
 
   return {
     plugins,
