@@ -30,7 +30,7 @@ module.exports = {
    * @external https://goo.gl/6ydeXP
    * @description The directory where Jest should output its coverage files.
    */
-  coverageDirectory: '<rootDir>/dist/coverage',
+  coverageDirectory: '<rootDir>/build/coverage',
 
   /**
    * @external https://goo.gl/pMhCGx
