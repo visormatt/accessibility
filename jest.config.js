@@ -60,9 +60,17 @@ module.exports = {
    * in all test environments.
    */
   globals: {
+    _babelPolyfill: true,
+
+    mount: true,
     mount: true,
     render: true,
-    shallow: true
+    shallow: true,
+
+    'ts-jest': {
+      diagnostics: true,
+      warnOnly: true
+    }
   },
 
   /**
@@ -110,7 +118,18 @@ module.exports = {
    * @description these scripts will be executed in the testing environment
    * immediately before executing the test code itself.
    */
-  setupFiles: [],
+  // setupFiles: [],
+  setupFiles: ['<rootDir>/build/test/setup.js'],
+
+  /**
+   * @external https://goo.gl/zPzjQR
+   * @description The path to a module that runs some code to configure or
+   * set up the testing framework before each test. Since setupFiles
+   * executes before the test framework is installed in the environment,
+   * this script file presents you the opportunity of running some code
+   * immediately after the test framework has been installed in the environment.
+   */
+  // setupTestFrameworkScriptFile: '<rootDir>/build/test/setup.js',
 
   /**
    * @external https://www.npmjs.com/package/enzyme-to-json

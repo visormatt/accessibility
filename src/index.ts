@@ -1,9 +1,6 @@
 // Vendor
-import '@babel/polyfill';
 import pa11y from 'pa11y';
-import { ADMIN, THREDUP } from './constants';
-
-const URLS = true ? ADMIN : THREDUP;
+// import { ADMIN, THREDUP } from './constants';
 
 const parseError = (data: any) => {
   const { context, message } = data;
@@ -28,6 +25,7 @@ const checkURL = async (url: string) => {
   await pa11y(url).then(parseResults);
 };
 
-URLS.map(checkURL);
+// const URLS = true ? ADMIN : THREDUP;
+// URLS.map(checkURL);
 
 export { checkURL, parseError, parseResults };
